@@ -1121,12 +1121,11 @@ const proposalHTML = `
   proposalWindow.document.write(proposalHTML);
   proposalWindow.document.close();
 
- 
-    proposalWindow();
 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
+
 });
