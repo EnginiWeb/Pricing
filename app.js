@@ -130,6 +130,7 @@ const vendorLogoMap = {
   Jira: "logos/jira.png",
   Salesforce: "logos/salesforce.png",
   "monday.com": "logos/monday-com.png",
+  "Monday CRM": "logos/monday-crm.png",
   NetSuite: "logos/netsuite.png",
   Expensify: "logos/Expensify.png",
   HubSpot: "logos/hubspot.png",
@@ -144,7 +145,65 @@ const vendorLogoMap = {
   BambooHR: "logos/bamboohr.png",
   Infor: "logos/infor-erp.png",
   Workday: "logos/workday.png",
-  Priority: "logos/priority.png"
+  Priority: "logos/priority.png",
+  "Amazon SQS": "logos/Amazon-sqs.png",
+  "Business One": "logos/business-one.png",
+  "G Workspace": "logos/G-Workspace.png",
+  Gmail: "logos/Gmail.png",
+  "MS SQL": "logos/ms-sql.png",
+  OneDrive: "logos/onedrive.png",
+  "Google Chat": "logos/google-chat.png",
+  "Google Meet": "logos/google-meet.png",
+  "Google Sheets": "logos/google-sheets.png",
+  "Google Docs": "logos/google-docs.png",
+  "Google Slides": "logos/google-slides.png",
+  "Google Forms": "logos/google-forms.png",
+  "Google Keep": "logos/google-keep.png",
+  "Google Tasks": "logos/google-tasks.png",
+  "Google Calendar": "logos/g-calendar.png",
+  "Microsoft Teams": "logos/microsoft-teams.png",
+  "MS Planner": "logos/ms-planner.png",
+  "MS OneNote": "logos/ms-onenote.png",
+  "MS Forms": "logos/ms-forms.png",
+  ADP: "logos/adp.png",
+  Xero: "logos/xero.png",
+  Quickbooks: "logos/quickbooks.png",
+  Zuora: "logos/zuora.png",
+  "Active Directory": "logos/active-directory.png",
+  AWS: "logos/aws.png",
+  Azure: "logos/azure.png",
+  "Google Cloud": "logos/google-cloud.png",
+  Box: "logos/box.png",
+  Slack: "logos/slack.png",
+  Asana: "logos/asana.png",
+  ClickUp: "logos/clickup.png",
+  Airtable: "logos/airtable.png",
+  Pipedrive: "logos/pipedrive.png",
+  Zoho: "logos/zoho.png",
+  DocuSign: "logos/docusign.png",
+  ServiceNow: "logos/servicenow.png",
+  Snowflake: "logos/snowflake.png",
+  LinkedIn: "logos/linkedin.png",
+  PayPal: "logos/paypal.png",
+  PayPlus: "logos/payplus.png",
+  Payme: "logos/payme.png",
+  Coupa: "logos/coupa.png",
+  Dealfront: "logos/Dealfront.png",
+  Meshulam: "logos/meshulam.png",
+  FedEx: "logos/fedex.png",
+  UPS: "logos/ups.png",
+  WooCommerce: "logos/woocommerce.png",
+  OpenAI: "logos/openai.png",
+  Anthropic: "logos/Anthropic.png",
+  Fireberry: "logos/Fireberry.png",
+  Tiipati: "logos/Tiipati.png",
+  HFD: "logos/HFD.png",
+  HERP: "logos/HERP.png",
+  Gusto: "logos/Gusto.png"
+};
+
+const getVendorLogo = (vendorName) => {
+  return vendorLogoMap[vendorName] || "logos/default.png";
 };
 
 const getVendorLogo = v => vendorLogoMap[v] || `logos/${v.toLowerCase().replace(/ /g, '-')}.png` || "logos/default.png";
@@ -1130,3 +1189,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
 });
+
