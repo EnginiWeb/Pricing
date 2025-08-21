@@ -64,7 +64,7 @@ const allConnectors = [
   { name: "NetSuite", category: "ERP" },
   { name: "Microsoft", category: "Platform/General" },
   { name: "Wiz", category: "Security" },
-  { name: "Tiipati", category: "Finance/Payments" },
+  { name: "Tipalti", category: "Finance/Payments" },
   { name: "Coupa", category: "Procurement/Finance" },
   { name: "Microsoft Teams", category: "Communication/Chat" },
   { name: "Gusto", category: "HR/Payroll" },
@@ -1131,3 +1131,4 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
