@@ -75,15 +75,21 @@
         <section class="calculator-section sticky-panel">
           <h3 class="section-subtitle">Connectors</h3>
           <div class="input-group">
-            <label for="connectorSearch">Choose your vendors:</label>
-            <div class="search-box">
-              <input type="text" id="connectorSearch" placeholder="Search vendors or products…" />
-            </div>
-            <div id="connectors-container" class="connector-catalog square3 checkbox-list" role="listbox"></div>
-            <div class="info-chip">
-              <strong>Premium Vendors Selected: <span id="connector-count">0</span></strong>
-            </div>
-          </div>
+        
+  <label for="connectorSearch">Choose your vendors:</label>
+  <div class="search-box">
+    <input type="text" id="connectorSearch" placeholder="Search vendors or products…" />
+  </div>
+
+  <div class="connectors-scroll-wrapper">
+    <div id="connectors-container" class="connector-catalog square3 checkbox-list" role="listbox"></div>
+  </div>
+
+  <div class="info-chip">
+    <strong>Premium Vendors Selected: <span id="connector-count">0</span></strong>
+  </div>
+</div>
+
         </section>
       </aside>
     </section>
@@ -93,4 +99,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
