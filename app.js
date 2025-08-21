@@ -103,7 +103,7 @@ const allConnectors = [
   { name: "Google Keep", category: "Communication/Notes" },
   { name: "Google Meet", category: "Communication/Video" },
   { name: "Google Sheets", category: "Database/Spreadsheet" },
-  { name: "Monday.com", category: "Project Management/CRM" },
+  { name: "Monda-com", category: "Project Management/CRM" },
   { name: "Airtable", category: "Database/Spreadsheet" },
   { name: "Clay", category: "Data Enrichment/AI" },
   { name: "ClickUp", category: "Project Management" },
@@ -125,7 +125,7 @@ const allConnectors = [
 const vendorLogoMap = {
   SAP: "logos/sap.png",
   Sage: "logos/sage.png",
-  Microsoft: "logos/dynamics-365.png",
+  Microsoft: "logos/microsoft.png",
   Oracle: "logos/oracle.png",
   Jira: "logos/jira.png",
   Salesforce: "logos/salesforce.png",
@@ -146,6 +146,23 @@ const vendorLogoMap = {
   Workday: "logos/workday.png",
   Priority: "logos/priority.png"
 };
+
+
+function getVendorLogo(name) {
+  if (vendorLogoMap[name]) return vendorLogoMap[name];
+
+ 
+  let file = name.toLowerCase().replace(/[\s\.]/g, "-");
+
+
+  if (name.toLowerCase().includes("postgres")) return "logos/PostgreSQL.png";
+  if (name.toLowerCase().includes("expensify")) return "logos/Expensify.png";
+  if (name.toLowerCase().includes("ibm db2")) return "logos/IBM-DB2.png";
+  if (name.toLowerCase().includes("okta")) return "logos/Okta.png";
+
+  return `logos/${file}.png`;
+}
+
 
 const getVendorLogo = v => vendorLogoMap[v] || `logos/${v.toLowerCase().replace(/ /g, '-')}.png` || "logos/default.png";
 
@@ -1131,4 +1148,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
 
