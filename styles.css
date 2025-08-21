@@ -641,4 +641,16 @@ body {
     box-shadow: 0 0 25px rgba(97, 97, 255, 0.9), 0 0 55px rgba(97, 97, 255, 0.4);
     transform: scale(1.04);
   }
+
+}
+
+
+.connectors-scroll-wrapper {
+  max-height: 800px;
+  overflow-y: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-right: 6px;
+  border-radius: 10px;
+  scroll-behavior: smooth;
 }
