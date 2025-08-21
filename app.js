@@ -1138,8 +1138,10 @@ const proposalHTML = `
   proposalWindow.document.write(proposalHTML);
   proposalWindow.document.close();
 
- 
-    proposalWindow();
+ const proposalWindow = window.open('', '_blank');
+proposalWindow.document.write(proposalHTML);
+proposalWindow.document.close();
+
 
 });
 
@@ -1148,6 +1150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
 
 
 
