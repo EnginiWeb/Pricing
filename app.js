@@ -78,6 +78,7 @@ const allConnectors = [
   { name: "ADP", category: "HR/Payroll" },
   { name: "Business One", category: "ERP" },
   { name: "Monday CRM", category: "CRM/Project Management" },
+  { name: "Monday-com", category: "CRM/Project Management" },
   { name: "BASE44", category: "Custom/Platform" },
   { name: "Loveable", category: "Marketing/Loyalty" },
   { name: "WooCommerce", category: "E-commerce" },
@@ -147,7 +148,7 @@ const vendorLogoMap = {
   Priority: "logos/priority.png"
 };
 
-const getVendorLogo = v => vendorLogoMap[v] || `logos/${v.toLowerCase().replace(/ /g, '-')}.png` || "logos/default.png";
+
 
 const selectedConnectors = new Set(); 
 let selectedHours = 0;
@@ -287,8 +288,6 @@ function renderConnectorGrid(filter = "") {
     logo.src = getVendorLogo(connector.name);
     logo.alt = `${connector.name} logo`;
     logo.className = "connector-logo";
-    logo.onerror = () => logo.src = "logos/default.png";
-
     const name = document.createElement("div");
     name.className = "connector-name";
     name.textContent = connector.name;
@@ -1129,4 +1128,5 @@ const proposalHTML = `
 document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
+
 });
