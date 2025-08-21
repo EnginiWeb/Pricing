@@ -135,7 +135,7 @@ const vendorLogoMap = {
   Expensify: "logos/Expensify.png",
   HubSpot: "logos/hubspot.png",
   MySQL: "logos/mysql.png",
-  Postgres: "logos/PostgreSQL.png",
+  PostgreSQL: "logos/PostgreSQL.png",
   "IBM DB2": "logos/IBM-DB2.png",
   Okta: "logos/Okta.png",
   Zendesk: "logos/zendesk.png",
@@ -1189,5 +1189,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
 });
+
 
 
