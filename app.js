@@ -32,7 +32,7 @@ const premiumConnectors = [
 ];
 
 const allConnectors = [
-  { name: "Amazon-sqs", category: "Messaging/Queue" },
+  { name: "Amazon SQS", category: "Messaging/Queue" },
   { name: "box", category: "Storage/Files" },
   { name: "Comeet", category: "HR/Recruiting" },
   { name: "Expensify", category: "Finance/Expense" },
@@ -1148,5 +1148,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
 
 
