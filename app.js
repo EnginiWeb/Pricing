@@ -32,7 +32,7 @@ const premiumConnectors = [
 ];
 
 const allConnectors = [
-  { name: "Amazon SQS", category: "Messaging/Queue" },
+  { name: "Amazon-sqs", category: "Messaging/Queue" },
   { name: "box", category: "Storage/Files" },
   { name: "Comeet", category: "HR/Recruiting" },
   { name: "Expensify", category: "Finance/Expense" },
@@ -1129,4 +1129,5 @@ const proposalHTML = `
 document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
+
 });
