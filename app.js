@@ -1,26 +1,127 @@
-const vendorGroups = {
-  SAP: ["SAP S/4HANA", "SAP Business One", "SAP SuccessFactors"],
-  Sage: ["Sage", "Sage HR", "Sage 200", "Sage Intacct"],
-  Microsoft: ["Microsoft Dataverse", "MS SQL", "Azure Active Directory"],
-  Oracle: ["Oracle", "Oracle Human Capital Management (HCM)"],
-  Jira: ["Jira Service Management Cloud", "Jira Cloud platform"],
-  Salesforce: ["Salesforce"],
-  "monday.com": ["monday.com"],
-  NetSuite: ["Netsuite"],
-  Expensify: ["Expensify"],
-  HubSpot: ["Hubspot CRM"],
-  MySQL: ["MySQL"],
-  Postgres: ["Postgres"],
-  "IBM DB2": ["IBM DB2"],
-  Okta: ["Okta"],
-  Zendesk: ["Zendesk – Including SCIM"],
-  Comeet: ["Comeet"],
-  "Zip HQ": ["Zip HQ"],
-  hiBob: ["hibob"],
-  BambooHR: ["BambooHR"],
-  Infor: ["Infor"],
-  Workday: ["Workday"],
-  Priority: ["Priority"]
+const vendorLogoMap = {
+  "SAP": "logos/sap.png",
+  "SAP S/4HANA": "logos/sap.png",
+  "SAP Business One": "logos/business-one.png",
+  "SAP SuccessFactors": "logos/sap.png",
+
+  "Sage": "logos/sage.png",
+  "Sage HR": "logos/sage.png",
+  "Sage 200": "logos/sage.png",
+  "Sage Intacct": "logos/sage.png",
+
+  "Microsoft": "logos/microsoft.png",
+  "Microsoft Dataverse": "logos/dynamics-365.png",
+  "MS SQL": "logos/ms-sql.png",
+  "Azure Active Directory": "logos/active-directory.png",
+  "Azure": "logos/azure.png",
+  "Dynamics 365": "logos/dynamics-365.png",
+  "Microsoft Teams": "logos/microsoft-teams.png",
+  "MS Planner": "logos/ms-planner.png",
+  "MS OneNote": "logos/ms-onenote.png",
+  "MS Forms": "logos/ms-forms.png",
+  "SharePoint": "logos/sharepoint.png",
+  "PowerPoint": "logos/powerpoint.png",
+
+  "Oracle": "logos/oracle.png",
+  "Oracle Human Capital Management (HCM)": "logos/oracle.png",
+  "Oracle E-Business Suite": "logos/oracle-ebs.png",
+
+  "Jira": "logos/jira.png",
+  "Jira Service Management Cloud": "logos/jira.png",
+  "Jira Cloud platform": "logos/jira.png",
+  "Confluence": "logos/confluence.png",
+
+  "Salesforce": "logos/salesforce.png",
+  "monday.com": "logos/monday-com.png",
+  "Monday.com": "logos/monday-com.png",
+  "Monday CRM": "logos/monday-crm.png",
+  "NetSuite": "logos/netsuite.png",
+
+  "Expensify": "logos/expensify.png",
+  "HubSpot": "logos/hubspot.png",
+  "Hubspot CRM": "logos/hubspot.png",
+
+  "MySQL": "logos/mysql.png",
+  "Postgres": "logos/postgresql.png",
+  "PostgreSQL": "logos/postgresql.png",
+  "IBM DB2": "logos/ibm-db2.png",
+
+  "Okta": "logos/okta.png",
+  "Zendesk": "logos/zendesk.png",
+  "Zendesk – Including SCIM": "logos/zendesk.png",
+
+  "Comeet": "logos/comeet.png",
+  "Zip HQ": "logos/ziphq.png",
+  "Zip Archive": "logos/zip-archive.png",
+
+  "hiBob": "logos/hibob.png",
+  "BambooHR": "logos/bamboohr.png",
+  "Infor": "logos/infor-erp.png",
+  "Infor ERP": "logos/infor-erp.png",
+  "Workday": "logos/workday.png",
+  "Priority": "logos/priority.png",
+
+  "Amazon SQS": "logos/amazon-sqs.png",
+  "Anthropic": "logos/anthropic.png",
+  "Coupa": "logos/coupa.png",
+  "Dealfront": "logos/dealfront.png",
+  "Fireberry": "logos/fireberry.png",
+  "G Workspace": "logos/g-workspace.png",
+  "Gmail": "logos/gmail.png",
+  "G Calendar": "logos/g-calendar.png",
+  "Gusto": "logos/gusto.png",
+  "HERP": "logos/herp.png",
+  "HFD": "logos/hfd.png",
+  "PayPal": "logos/paypal.png",
+  "PayPlus": "logos/payplus.png",
+  "Perplexity": "logos/perplexity.png",
+  "Tiipati": "logos/tiipati.png",
+  "Wiz": "logos/wiz.png",
+
+  "Active Directory": "logos/active-directory.png",
+  "Acumatica": "logos/acumatica.png",
+  "ADP": "logos/adp.png",
+  "Airtable": "logos/airtable.png",
+  "Asana": "logos/asana.png",
+  "AWS": "logos/aws.png",
+  "Box": "logos/box.png",
+  "Bill.com": "logos/bill-com.png",
+  "Business One": "logos/business-one.png",
+  "Clay": "logos/clay.png",
+  "ClickUp": "logos/clickup.png",
+  "DocuSign": "logos/docusign.png",
+  "FedEx": "logos/fedex.png",
+  "Gemini": "logos/gemini.png",
+  "Google Chat": "logos/google-chat.png",
+  "Google Cloud": "logos/google-cloud.png",
+  "Google Docs": "logos/google-docs.png",
+  "Google Forms": "logos/google-forms.png",
+  "Google Keep": "logos/google-keep.png",
+  "Google Meet": "logos/google-meet.png",
+  "Google Sheets": "logos/google-sheets.png",
+  "Google Slides": "logos/google-slides.png",
+  "Google Tasks": "logos/google-tasks.png",
+  "Jumpcloud": "logos/jumpcloud.png",
+  "LinkedIn": "logos/linkedin.png",
+  "Loveable": "logos/loveable.png",
+  "ManyChat": "logos/manychat.png",
+  "Marketo": "logos/marketo.png",
+  "Meshulam": "logos/meshulam.png",
+  "OneDrive": "logos/onedrive.png",
+  "Open AI": "logos/openai.png",
+  "OpenAI": "logos/openai.png",
+  "Payme": "logos/payme.png",
+  "Pipedrive": "logos/pipedrive.png",
+  "Quickbooks": "logos/quickbooks.png",
+  "Slack": "logos/slack.png",
+  "ServiceNow": "logos/servicenow.png",
+  "Snowflake": "logos/snowflake.png",
+  "UPS": "logos/ups.png",
+  "WooCommerce": "logos/woocommerce.png",
+  "Xero": "logos/xero.png",
+  "Zoho": "logos/zoho.png",
+  "Zoho CRM": "logos/zoho.png",
+  "Zuora": "logos/zuora.png",
 };
 
 const premiumConnectors = [
@@ -151,20 +252,21 @@ const vendorLogoMap = {
 function getVendorLogo(name) {
   if (vendorLogoMap[name]) return vendorLogoMap[name];
 
- 
-  let file = name.toLowerCase().replace(/[\s\.]/g, "-");
+  const lower = name.toLowerCase();
 
+  // Special cases
+  if (lower.includes("postgres")) return "logos/PostgreSQL.png";
+  if (lower.includes("expensify")) return "logos/Expensify.png";
+  if (lower.includes("ibm db2")) return "logos/IBM-DB2.png";
+  if (lower.includes("okta")) return "logos/Okta.png";
 
-  if (name.toLowerCase().includes("postgres")) return "logos/PostgreSQL.png";
-  if (name.toLowerCase().includes("expensify")) return "logos/Expensify.png";
-  if (name.toLowerCase().includes("ibm db2")) return "logos/IBM-DB2.png";
-  if (name.toLowerCase().includes("okta")) return "logos/Okta.png";
-
+  // Normalize (spaces, dots → dashes)
+  let file = lower.replace(/[\s\.]/g, "-");
   return `logos/${file}.png`;
 }
 
 
-const getVendorLogo = v => vendorLogoMap[v] || `logos/${v.toLowerCase().replace(/ /g, '-')}.png` || "logos/default.png";
+
 
 const selectedConnectors = new Set(); 
 let selectedHours = 0;
@@ -1138,11 +1240,6 @@ const proposalHTML = `
   proposalWindow.document.write(proposalHTML);
   proposalWindow.document.close();
 
- const proposalWindow = window.open('', '_blank');
-proposalWindow.document.write(proposalHTML);
-proposalWindow.document.close();
-
-
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1150,6 +1247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
 
 
 
