@@ -187,7 +187,7 @@ const vendorLogoMap = {
   PayPal: "logos/paypal.png",
   PayPlus: "logos/payplus.png",
   Payme: "logos/payme.png",
-  Coupa: "logos/coupa.png",
+  Coupa: "logos/Coupa.png",
   Dealfront: "logos/Dealfront.png",
   Meshulam: "logos/meshulam.png",
   FedEx: "logos/fedex.png",
@@ -1189,4 +1189,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderConnectorGrid();
   updateCalculations();
 });
+
 
