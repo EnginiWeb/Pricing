@@ -130,7 +130,7 @@ const vendorLogoMap = {
   Oracle: "logos/oracle.png",
   Jira: "logos/jira.png",
   Salesforce: "logos/salesforce.png",
-  "monday.com": "logos/monday-com.png",
+  "monday.com": "logos/Monday-com.png",
   NetSuite: "logos/netsuite.png",
   Expensify: "logos/Expensify.png",
   HubSpot: "logos/hubspot.png",
@@ -1130,3 +1130,4 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCalculations();
 
 });
+
